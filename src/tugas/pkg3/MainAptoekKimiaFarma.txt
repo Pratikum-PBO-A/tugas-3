@@ -1,0 +1,26 @@
+package apotekkimiafarma;
+import java.util.Scanner;
+public class ApotekKimiaFarma {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        String pilih;
+        System.out.print("Masukkan Nama Anda  =   ");
+        String a = inp.nextLine();
+        System.out.print("Masukkan alamat Anda  =    ");
+        String l = inp.nextLine();
+        String obat;
+        ClassApotekKimiaFarma mini = new ClassApotekKimiaFarma(a, l);
+        do {
+            System.out.println("********** Pilih Obat Yang Anda Inginkan **********");
+            System.out.println(" *Obat Yang Tersedia*");
+            System.out.println(" -Imboost \t -Ampicilin\n -Oscadol\t -Cefixime \n -Ceftadizime \t -Climdaycin \n -Sianida \t -Kalmicetine \n -Sripadan \t -Formalin");
+            System.out.print("Masukkan Nama Obat:");
+            obat = inp.nextLine();
+            mini.testapotik(obat);
+            System.out.println("Tambah lagi : Y/T");
+            pilih = inp.nextLine();
+        } while ("Y".equalsIgnoreCase(pilih));
+        mini.StrukKimiaFarma();
+    }
+    
+}
