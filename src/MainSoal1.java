@@ -1,29 +1,38 @@
 package Bab3;
 import java.util.Scanner;
-
 public class MainSoal1 {
     public static void main(String[] args) {
-	Scanner albert = new Scanner(System.in);
-	
-        System.out.println("============================== \n     > Program Konversi < \n==============================");
-        System.out.println("Pilihan: \n 1.Angka ke Huruf \n 2.Huruf ke Angka \n==============================");
-        System.out.print("Masukan Pilihan : ");
-        int pilihan = albert.nextInt();
-        
-            if(pilihan == 1){
-                System.out.println("==============================");
-                System.out.print("Masukkan Angka[0-100] : ");
-                System.out.println(new Soal1().overloadingMeth(albert.nextInt()));
-                System.out.println("==============================");
+        Scanner scan = new Scanner(System.in);
+        Scanner scan2 = new Scanner(System.in);
+        Soal1 konv = new Soal1();
+        int pilih = 0;
+        while (pilih != 3) {
+            System.out.println("Menu Konversi");
+            System.out.println("1. Angka-Huruf");
+            System.out.println("2. Huruf-Angka");
+            System.out.println("3. Keluar");
+            System.out.print("Pilih : ");
+            pilih = scan.nextInt();
+            switch (pilih) {
+                case 1:
+                    konv.setAngka(0);
+                    System.out.println((konv.overloadingMeth(konv.getAngka())));
+                    System.out.println("");
+                    break;
+                case 2:
+                    konv.setHuruf("");                   
+                    System.out.println((konv.overloadingMeth(konv.getHuruf())));
+                    System.out.println("");
+                    break;
+                case 3:
+                    System.out.println("Program konversi berahir");
+                    break;
+                default:
+                    System.out.println("Anda Salah Pilih");
+                    
+            }
+        }
 
-            }
-            else if(pilihan == 2){
-                System.out.println("==============================");
-                System.out.print("Masukkan Huruf[Nol-Seratus] : ");
-                System.out.println(new Soal1().overloadingMeth(albert.nextInt()));
-                System.out.println("==============================");
-            }
-            else
-                System.out.println("Anda Salah Pilih ^^,");
     }
+
 }
