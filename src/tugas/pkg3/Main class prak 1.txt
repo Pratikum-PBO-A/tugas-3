@@ -1,0 +1,18 @@
+package prakoverloading;
+import java.util.Scanner;
+public class PrakOverloading {
+    public static void main(String[] args) {
+        Scanner inpt = new Scanner(System.in);
+        konversi a = new konversi();
+        System.out.print("Masukkan nilai dalam angka : ");
+        int n1 = inpt.nextInt();
+        a.overloadingMeth(n1);
+        System.out.print("Input angka dengan huruf : ");
+        a.overLoadingMeth(inpt.nextLine());
+        a.overLoadingMeth(inpt.nextLine());
+        System.out.println(a.getHasilAngka());
+    }
+
+    
+}
+    

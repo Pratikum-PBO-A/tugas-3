@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class mainApotik {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String pilih;
+        System.out.print("Masukkan Nama  : ");
+        String a = s.nextLine();
+        System.out.print("Masukkan alamat:");
+        String l = s.nextLine();
+        String obat;
+        Apotik mini = new Apotik(a, l);
+        do {
+            System.out.println("------- Silahkan Pesan Obat ----------");
+            System.out.println(" *Obat yang Tersedia*");
+            System.out.println(" -paramex \t -konidin\n -neuremacil\t -bodrek \n -decolgen \t -paracetamol \n -reumacil \t -promag \n -entrostop \t -alpara");
+            System.out.print("Masukkan Nama Obat:");
+            obat = s.nextLine();
+            mini.cobaapotik(obat);
+            System.out.println("Tambah lagi : Y/N");
+            pilih = s.nextLine();
+        } while ("y".equalsIgnoreCase(pilih));
+        mini.struk();
+
+    }
+}
