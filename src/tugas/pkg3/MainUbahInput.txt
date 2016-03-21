@@ -1,0 +1,27 @@
+package ubahinput;
+
+import java.util.Scanner;
+
+public class UbahInput {
+
+    public static void main(String[] args) {
+        System.out.println("******************************************");
+        System.out.println("\tProgram Pengubah Inputan");
+        System.out.println("==========================================");
+        Scanner input = new Scanner(System.in);
+        System.out.print("Masukkan angka(0-100)(dalam angka): ");
+        int bilangan = input.nextInt();
+        System.out.println("Teks:");
+        ClassUbahInput.OverloadingMeth(bilangan);
+        System.out.println("===========================================");
+
+        System.out.print("Masukkan angka(0-100)(dalam teks):");
+        String bil = input.nextLine();
+        bil = input.nextLine();
+        System.out.println("Bilangan :");
+        System.out.println(ClassUbahInput.overloadingMeth(bil));
+
+        System.out.println("===========================================");
+    }
+
+}
