@@ -1,7 +1,5 @@
 package tugas.pkg3;
-
 import java.util.Scanner;
-
 public class soal1 {
 
     private String Huruf[] = {" ", "satu", "dua", "tiga", "empat",
@@ -90,7 +88,7 @@ public class soal1 {
         } else {
             Hratusan = Huruf[Ratusan] + " " + "Ratus";
         }
-        //puluhan dan satuan
+//puluhan dan satuan
         if (Puluhan == 1) {
             if (Satuan == 0) {
                 Hpuluhan = "Sepuluh";
