@@ -75,28 +75,34 @@ public class soal1 {
 //ribuan
         if (Ribuan == 1) {
             Hribuan = "Seribu";
-        } else if (Ribuan == 0) {
-            Hribuan = "";
         } else {
+            if (Ribuan == 0) {
+                Hribuan = "";
+            } else {
             Hribuan = Huruf[Ribuan] + " " + "ribu";
+            }
         }
 //ratusan
         if (Ratusan == 1) {
             Hratusan = "Seratus";
-        } else if (Ratusan == 0) {
-            Hratusan = "";
+        } else {
+            if (Ratusan == 0) {
+                Hratusan = "";
         } else {
             Hratusan = Huruf[Ratusan] + " " + "Ratus";
         }
+    }
 //puluhan dan satuan
         if (Puluhan == 1) {
             if (Satuan == 0) {
                 Hpuluhan = "Sepuluh";
                 Hsatuan = Huruf[Satuan];
-            } else if (Satuan == 1) {
-                Hpuluhan = "Sebelas";
-                Hsatuan = "";
+            } else {
+                if (Satuan == 1) {
+                    Hpuluhan = "Sebelas";
+                    Hsatuan = "";
             }
+        }
         } else if (Puluhan == 0) {
             Hpuluhan = "";
             Hsatuan = Huruf[Satuan];
