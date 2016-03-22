@@ -1,0 +1,55 @@
+package prakoverloading;
+
+import java.util.Scanner;
+
+class konversi {
+
+public String [] huruf = {"Nol","Satu","Dua","Tiga","Empat","Lima","Enam","Tujuh","Delapan","Sembilan","Sepuluh","Sebelas"};
+public String [] angka = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"};
+
+private String hasilAngka;
+
+public String getHasilAngka() {
+        return hasilAngka;
+    }    
+
+public String overloadingMeth(int n1) {
+    String hasil=("");
+    if(n1<12){
+            hasil=hasil+huruf[n1];
+        System.out.println(hasil);
+        }else if (n1<20){
+            hasil=hasil+huruf[n1-10];
+            System.out.println(hasil+" belas");
+        }else if(n1<100){
+            hasil=hasil+huruf[n1/10]+" puluh "+huruf[n1%10];
+            System.out.println(hasil);
+        }else if (n1 < 0 || n1 > 100) {
+            System.out.println("===============================");
+            System.out.println("------------[Error]------------");
+            System.out.println("===============================");
+        }
+        return hasil;
+    }
+    
+
+
+public String overLoadingMeth(String n2) {
+    for (int i = 0; i < this.huruf.length; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (n2.equalsIgnoreCase(this.huruf[i])) {
+hasilAngka = angka[i];
+                } else if (n2.equalsIgnoreCase(this.huruf[i] + " belas")) {
+hasilAngka = angka[1] + angka[i];
+                } else if (n2.equalsIgnoreCase(this.huruf[i] + " puluh")) {
+hasilAngka = angka[i] + angka[0];
+                } else if (n2.equalsIgnoreCase(this.huruf[i] + " puluh " + this.huruf[j])) {
+hasilAngka = angka[i] + angka[j];
+                } else if (n2.equalsIgnoreCase("Seratus")) {
+hasilAngka = angka[1] + angka[0] + angka[0];
+                } 
+            }
+        }
+        return hasilAngka;
+    }
+}
